@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainLogCleaner</class>
+ <widget class="QMainWindow" name="MainLogCleaner">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>802</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>LogCleaner 0.1.0</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>41</x>
+      <y>61</y>
+      <width>366</width>
+      <height>242</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="lTextInput">
+       <property name="text">
+        <string>Texto aqui</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="lValue">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QTextBrowser" name="textBrowserInput"/>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="pushButtonTexto1">
+       <property name="text">
+        <string>Aceptar</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>802</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuConfiguracion">
+    <property name="title">
+     <string>Configuracion</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>Sobre</string>
+    </property>
+    <addaction name="actionLogCleaner"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuConfiguracion"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <action name="actionLogCleaner">
+   <property name="text">
+    <string>LogCleaner</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>textBrowserInput</tabstop>
+  <tabstop>pushButtonTexto1</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>textBrowserInput</sender>
+   <signal>anchorClicked(QUrl)</signal>
+   <receiver>lValue</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>241</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>90</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
